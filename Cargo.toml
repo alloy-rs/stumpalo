@@ -3,17 +3,35 @@ name = "stumpalo"
 description = "Local evm2 fork of stumpalo with explicit stack-frame commit and rollback"
 
 version = "0.1.4"
-edition.workspace = true
-rust-version.workspace = true
-authors.workspace = true
-license.workspace = true
-homepage.workspace = true
-repository.workspace = true
-categories.workspace = true
-keywords.workspace = true
+edition = "2024"
+rust-version = "1.96"
+authors = ["DaniPopes <57450786+DaniPopes@users.noreply.github.com>"]
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/alloy-rs/stumpalo"
+repository = "https://github.com/alloy-rs/stumpalo"
+categories = ["cryptography::cryptocurrencies", "development-tools", "no-std"]
+keywords = ["arena", "bump", "checkpoint", "evm", "stack"]
 
-[lints]
-workspace = true
+[lints.rust]
+missing-copy-implementations = "warn"
+missing-debug-implementations = "warn"
+missing-docs = "warn"
+rust-2018-idioms = "warn"
+unreachable-pub = "warn"
+unused-must-use = "warn"
+redundant-lifetimes = "warn"
+unnameable-types = "warn"
+
+[lints.rustdoc]
+all = "warn"
+
+[lints.clippy]
+dbg-macro = "warn"
+manual-string-new = "warn"
+uninlined-format-args = "warn"
+use-self = "warn"
+redundant-clone = "warn"
+missing-const-for-fn = "warn"
 
 [features]
 default = ["std"]
